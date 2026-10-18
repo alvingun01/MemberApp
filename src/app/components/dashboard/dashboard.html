@@ -1,14 +1,11 @@
 <app-navbar></app-navbar>
 @if (user()) {
-<div>
+  <div>
     <p>{{ user()?.name }}</p>
     <p>{{ user()?.email }}</p>
     <p>{{ user()?.dateOfBirth }}</p>
-</div>
-<button (click)="handleEdit()">
-    Edit Profile
-</button>
-}
-@else {
-<p>Loading...</p>
+  </div>
+  <button (click)="handleEdit()">Edit Profile2</button>
+} @else {
+  <p>Loading...</p>
 }
