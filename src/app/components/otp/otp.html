@@ -1,0 +1,9 @@
+<app-pop-up #popUp>
+    <form [formGroup]="otpForm" class="modal-body">
+        <label>Enter OTP:</label>
+        <input type="text" formControlName="otp" />
+    </form>
+    <div class="modal-body">
+        <button (click)="submitOTP()">Submit</button>
+    </div>
+</app-pop-up>

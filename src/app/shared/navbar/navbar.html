@@ -1,0 +1,10 @@
+<div class="navbar-container">
+    <a href="/">Home</a>
+    <button (click)="dashboard()">Dashboard</button>
+    @if (!stateService.isLoggedIn()) {
+    <button (click)="login()">Login</button>
+    }
+    @else {
+    <button (click)="logout()">Logout</button>
+    }
+</div>

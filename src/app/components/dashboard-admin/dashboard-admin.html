@@ -1,0 +1,22 @@
+<app-navbar></app-navbar>
+<div class="table-container">
+    <table>
+        <thead>
+            <tr>
+                <th scope="col">Name</th>
+                <th scope="col">Email</th>
+                <th scope="col">Date of Birth</th>
+            </tr>
+        </thead>
+        <tbody>
+            @for (user of users(); track $index) {
+            <tr>
+                <th scope="row">{{ user.name }}</th>
+                <td>{{ user.email }}</td>
+                <td>{{ user.dateOfBirth.toString() }}</td>
+                <button (click)="handleEdit(user.id)"> Edit </button>
+            </tr>
+            }
+        </tbody>
+    </table>
+</div>

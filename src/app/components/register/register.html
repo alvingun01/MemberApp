@@ -1,0 +1,33 @@
+<h1>Register</h1>
+<h2>Hello, {{registerForm.controls.name.value}}</h2>
+<h2>Kamu dapet diskon {{discount}}</h2>
+
+<form [formGroup]="registerForm" (ngSubmit)="register()">
+    <div>
+        <label>Enter your name: </label>
+        <input type="text" formControlName="name" required />
+    </div>
+    <div>
+        <label>Enter your email: </label>
+        <input type="email" formControlName="email" required />
+    </div>
+    <div>
+        <label>Enter your password: </label>
+        <input type="password" formControlName="password" required />
+    </div>
+    <div>
+        <label>Enter your date of birth: </label>
+        <input type="date" formControlName="dateOfBirth" required />
+    </div>
+    <div>
+        <label>Enter your gender: </label>
+        <select formControlName="gender">
+            <option value="">--Please choose an option--</option>
+            <option value="female">Female</option>
+            <option value="male">Male</option>
+        </select>
+    </div>
+    <button type="submit">
+        Submit
+    </button>
+</form>

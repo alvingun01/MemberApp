@@ -1,0 +1,13 @@
+<app-otp #otp (otpSubmitted)="onOtpSubmitted($event)"></app-otp>
+<h1>Login</h1>
+<form [formGroup]="loginForm" (ngSubmit)="login()">
+  <div>
+    <label>Enter your email: </label>
+    <input type="text" formControlName="email" required />
+  </div>
+  <div>
+    <label>Enter your password: </label>
+    <input type="email" formControlName="password" required />
+  </div>
+  <button type="submit">Submit</button>
+</form>

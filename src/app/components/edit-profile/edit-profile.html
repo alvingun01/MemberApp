@@ -1,0 +1,22 @@
+<app-navbar></app-navbar>
+<p>edit-profile works!</p>
+<form [formGroup]="editForm" (ngSubmit)="submitForm()">
+    <div>
+        <label>Name</label>
+        <input type="text" formControlName="name">
+    </div>
+    <div>
+        <label>Email</label>
+        <input type="text" formControlName="email">
+    </div>
+    <div>
+        <label>Gender</label>
+        <input type="text" formControlName="gender">
+    </div>
+    <div>
+        <label>Date of Birth</label>
+        <input type="date" formControlName="dateOfBirth">
+    </div>
+    <button type="submit">Submit</button>
+
+</form>
